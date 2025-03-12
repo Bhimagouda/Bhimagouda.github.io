@@ -89,6 +89,13 @@ a:hover {
   background-position: center center;
 }
 
+/* iOS-specific fix for background-attachment */
+@supports (-webkit-touch-callout: none) {
+  .bg-image {
+    background-attachment: scroll;
+  }
+}
+
 .overlay-mf {
   background-color: #0078ff;
 }
@@ -626,6 +633,7 @@ a:hover {
   color: #fff;
   font-weight: 600;
   font-size: 3rem;
+  margin-top: -5cm;
 }
 
 .intro .intro-subtitle {
@@ -1186,4 +1194,8 @@ footer .credits a {
   }
 }
 
-@media (min-width
+@media (min-width: 767px) {
+  .counter-box {
+    margin-bottom: 1.8rem;
+  }
+}
